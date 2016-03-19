@@ -1,0 +1,43 @@
+<table class="table table-striped table-bordered">
+	<thead>
+		<tr>
+			<!--把你宽度写死不是我本意-->
+			<th class="cell-btn">选/退</th>
+			<th class="cell-btn">刷新</th>
+			<th class="cell-btn">收藏</th>
+			<th class="cell-name">课程名称</th>
+			<th class="cell-teacher">教师</th>
+			<th class="cell-count">已选/最大</th>
+			<th class="cell-count">上课周</th>
+			<th class="cell-time">上课时间</th>
+			<th class="cell-room">教室</th>
+			<th class="cell-mark">备注</th>
+			<th class="cell-link">链接</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="k in data.kaikeList | filter:canShow">
+			<td class="cell-btn">
+				<button class="btn btn-success" ng-click="qiang(k)" ng-if="!k.selected">选</button>
+				<button class="btn btn-danger" ng-click="tui(k)" ng-if="k.selected">退</button>
+			</td>
+			<td class="cell-btn">
+				<button class="btn btn-success" ng-click="refresh(k)">刷新</button>
+			</td>
+			<td class="cell-btn">
+				<button class="btn" ng-click="toggleCollect(k)" ng-class="{'btn-success':!k.collected,'btn-danger':k.collected}">
+					<span ng-show="!k.collected">收藏</span>
+					<span ng-show="k.collected">取消</span>
+				</button>
+			</td>
+			<td class="cell-name">{{::k.name}}</td>
+			<td class="cell-teacher">{{k.teacherList[0]}}</td>
+			<td class="cell-count">{{k.yxkrs}}/{{k.zdrs}}</td>
+			<td class="cell-count">{{::k.startWeek}}-{{::k.endWeek}}</td>
+			<td class="cell-time">{{::k.fmtTime}}</td>
+			<td class="cell-room">{{::k.room}}</td>
+			<td class="cell-mark">{{k.bz}}</td>
+			<td class="cell-link"><a ng-href="{{::k.url}}" target="_blank">Go</a></td>
+		</tr>
+	</tbody>
+</table>

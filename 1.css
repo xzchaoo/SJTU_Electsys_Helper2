@@ -1,0 +1,47 @@
+.cell-btn {
+	width: 3%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.cell-name {
+	width: 15%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.cell-teacher {
+	width: 8%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.cell-count {
+	width: 5%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.cell-time {
+	width: 8%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.cell-room {
+	width: 8%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.cell-mark {
+	width: 15%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.cell-link {
+	width: 5%;
+	text-align: center;
+	overflow: hidden;
+}

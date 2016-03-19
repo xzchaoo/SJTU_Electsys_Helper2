@@ -1,0 +1,15 @@
+<div>
+	<button class="btn btn-info" ng-click="stop()">停止加载</button>
+	<button class="btn btn-warning" ng-click="refresh()">刷新选课结果</button>
+	<button class="btn btn-primary" ng-click="submit()">提交选课结果</button>
+	<label>
+		<input type="text" class="form-control" placeholder="关键字" ng-model="keyword">
+	</label>
+	<label>
+		<input type="text" class="form-control" placeholder="上课时间" ng-model="time">
+	</label>
+	<label>
+		<input type="checkbox" ng-model="noFullKaike">不显示已满的开课
+	</label>
+	<p>提示: 不要点得太快, 否则可能会没反应, 如果你在上面的快速退课界面进行退课, 那么请点击"刷新选课结果"同步选课数据.</p>
+</div>

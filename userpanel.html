@@ -1,0 +1,10 @@
+<div class="panel panel-default" ng-if="isLogin">
+	<div class="panel-heading">{{::userinfo.name}}-{{::userinfo.xh}}-{{::userinfo.xy}}-{{::userinfo.zy}}</div>
+	<div class="panel-body">
+	</div>
+</div>
+<div class="panel panel-danger" ng-if="!isLogin">
+	<div class="panel-body">
+		你还没有登陆
+	</div>
+</div>

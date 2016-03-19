@@ -1,0 +1,21 @@
+<!-- 列出所有的类型 比如人文通选课 -->
+
+<div>
+	<button class="btn" ng-class="{'btn-default':!editMode,'btn-warning':editMode}" ng-click="editMode=!editMode">
+		<span ng-if="editMode">退出修改</span>
+		<span ng-if="!editMode">修改可见学院</span>
+	</button>
+	<button class="btn btn-success" ng-click="clear()">清空保存的数据</button>
+	<div class="panel panel-default" style="overflow:scroll;">
+		<div class="panel-body">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="xy in xyList" ng-class="{active:selectIndex==$index}" ng-click="!editMode && onTypeSelect($index,xy)" ng-if="editMode || xy.xyid==0 || xy.visible">
+					<button class="btn" ng-if="editMode&&!xy.xyid==0" ng-class="{'btn-info':!xy.visible,'btn-danger':xy.visible}" ng-click="xy.visible=!xy.visible">
+						<span class="glyphicon" ng-class="{'glyphicon-plus':!xy.visible,'glyphicon-remove':xy.visible}"></span>
+					</button>
+					{{xy.name}}
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
