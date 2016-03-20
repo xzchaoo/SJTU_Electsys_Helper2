@@ -4,6 +4,7 @@ https://github.com/xzchaoo/SJTU_Electsys_Helper
 
 新增截图和视频
 http://pan.baidu.com/s/1jGS2TRC
+视频录制工具有点问题, 会闪烁... 将就一下...
 
 # 用法 #
 执行的起点是 1.js
